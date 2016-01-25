@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape>
+
+            <!-- 圆角 -->
+            <corners
+                android:bottomLeftRadius="5dip"
+                android:bottomRightRadius="5dip"
+                android:topLeftRadius="5dip"
+                android:topRightRadius="5dip" />
+
+            <solid android:color="#000000" />
+        </shape>
+    </item>
+    <item
+        android:bottom="0.5dip"
+        android:left="0.5dip"
+        android:right="0.5dip"
+        android:top="0.5dip">
+        <shape>
+
+            <!-- 圆角 -->
+            <corners
+                android:bottomLeftRadius="5dip"
+                android:bottomRightRadius="5dip"
+                android:topLeftRadius="5dip"
+                android:topRightRadius="5dip" />
+            <!-- 填充内容 -->
+            <solid android:color="#F9F9F9" />
+        </shape>
+    </item>
+
+</layer-list>

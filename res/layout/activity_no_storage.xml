@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}"
+    android:background="#f1f2f3" >
+
+    <RelativeLayout 
+        android:background="#7494b2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView 
+            android:id="@+id/tv_nostorage_text1"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff00"
+            android:textSize="23sp"
+            android:text="恭喜您发现了新大陆"
+            android:layout_centerHorizontal="true"/>
+        <TextView 
+             android:id="@+id/tv_nostorage_text2"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:textColor="#e3eaf0"
+            android:text="赶紧给小伙伴晒一下吧"
+            android:layout_below="@+id/tv_nostorage_text1"
+             />
+        <Button 
+            android:id="@+id/btn_exosure"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/nostorage1"
+            android:text="去曝光"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_nostorage_text2"
+            />
+        <TextView 
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btn_exosure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4" >
+
+    <include
+        android:id="@+id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/activity_title" />
+
+    <!-- 内容 -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_title" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rl_submint_content"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/goods_list_border" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/background_border" >
+
+                    <EditText
+                        android:id="@+id/ed_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@+id/iv_camera"
+                        android:background="@null"
+                        android:hint="@string/ed_content"
+                        android:textColor="#000000"
+                        android:gravity="top"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <ImageView
+                        android:id="@+id/iv_camera"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/camera" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- 联系方式 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_submit_contact"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_below="@+id/rl_submint_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/goods_list_border" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/background_border" >
+
+                    <EditText
+                        android:id="@+id/ed_contact"
+                        android:digits="@string/register_name_digits"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="@null"
+                        android:hint="@string/ed_contact"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/small_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="13dp" >
+
+                    <TextView
+                        android:id="@+id/tv_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ed_left"
+                        android:textSize="10dip" />
+
+                    <TextView
+                        android:id="@+id/tv_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_left"
+                        android:text="@string/ed_center"
+                        android:textColor="#6FAECF"
+                        android:textSize="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_center"
+                        android:text="@string/ed_right"
+                        android:textSize="10dip" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

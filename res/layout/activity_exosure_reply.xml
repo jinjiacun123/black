@@ -1,0 +1,254 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${packageName}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.9" >
+
+            <com.huanrong.searchdarkvip.view.stone.customview.XListView
+                android:id="@+id/lv_exosure_reply"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:divider="#fff" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_exosure_reply_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/share1" />
+
+            <ImageView
+                android:id="@+id/iv_exosure_reply_speak"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/iv_exosure_reply_share"
+                android:src="@drawable/speak" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 分享选择框 -->
+
+    <FrameLayout
+        android:id="@+id/fl_exosure_reply_fl22"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#4c000000"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4c000000" >
+
+            <LinearLayout
+                android:id="@+id/rel_exosure_reply_rl22"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请选择好友还是朋友圈"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/reg_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_style_one_normal"
+                    android:text="分享到好友" />
+
+                <Button
+                    android:id="@+id/goto_send_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_style_one_normal"
+                    android:text="分享到朋友圈" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_exosure_reply_rl21"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/rel_exosure_reply_rl22" >
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <!-- 评论框 -->
+
+    <FrameLayout
+        android:id="@+id/fl_exosure_reply_fl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#4c000000"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4c000000" >
+
+            <RelativeLayout
+                android:id="@+id/rel_exosure_reply_rl2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_above="@+id/rel_noattestation_rl3"
+                android:background="#fff" >
+
+                <LinearLayout
+                    android:id="@+id/lin_exosure_reply_lin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/noattestation_comment_select" >
+
+                    <EditText
+                        android:id="@+id/et_exosure_reply_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lin_exosure_reply_lin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/lin_exosure_reply_lin1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_exosure_reply_comment_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/expression" />
+
+                    <ImageView
+                        android:id="@+id/iv_exosure_reply_comment_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/iv_exosure_reply_comment_icon1"
+                        android:clickable="false"
+                        android:src="@drawable/noattesxtation_1"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_exosure_reply_comments"
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/comments" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_noattestation_rl3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/ic_faces"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/custom_layout"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/ic_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/custom_updateload_images"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_exosure_reply_rl1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/rel_exosure_reply_rl2" >
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- 加载框 -->
+
+    <FrameLayout
+        android:id="@+id/fl_noattestation"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#999999" 
+        >
+
+        <ProgressBar
+            android:id="@+id/pb_search_flsh"
+            style="@android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp" />
+
+        <TextView
+            android:id="@+id/tv_jiazai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:text="正在加载数据"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 是未认证 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECF9FF"
+        android:paddingBottom="0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/warning" />
+
+                <TextView
+                    android:id="@+id/tv_noattestation_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="该机构未提交认证"
+                    android:textColor="#3dafea"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_praise_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="xxxxx"
+                    android:textColor="#333333" />
+
+                <ImageView
+                    android:id="@+id/iv_noattestation_addpraise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/praise_blue" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_dark_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="xxxxx"
+                    android:textColor="#333333" />
+
+                <ImageView
+                    android:id="@+id/iv_noattestation_adddark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/noattestation1" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_noattestation_adddark"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ll_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:src="@drawable/noattestation1"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_78"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_noattestation_adddark"
+            android:layout_marginTop="10dp"
+            android:background="#64bfee"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_noattestation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_78"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:id="@+id/tv_noattestation_hraad_havadark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="已加黑"
+                        android:textColor="#e2e2e2" />
+
+                    <TextView
+                        android:id="@+id/tv_noattestation_hraad_havadarknumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_noattestation_hraad_havadark"
+                        android:layout_centerHorizontal="true"
+                        android:text="3500"
+                        android:textColor="#ffff00" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/noattestation_hread_select" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:id="@+id/tv_noattestation_hraad_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="已评论"
+                        android:textColor="#e2e2e2" />
+
+                    <TextView
+                        android:id="@+id/tv_noattestation_hraad_commentnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_noattestation_hraad_comment"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffff00" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:id="@+id/tv_noattestation_hraad_exosure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="已曝光"
+                        android:textColor="#e2e2e2" />
+
+                    <TextView
+                        android:id="@+id/tv_noattestation_hraad_exosurenumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_noattestation_hraad_exosure"
+                        android:layout_centerHorizontal="true"
+                        android:text="3500"
+                        android:textColor="#ffff00" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_noattestation1"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <!-- 平台信息 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingTop="0dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_noattestation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_noattestation_terraceicon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_images"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/darkterrace3" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/iv_images"
+                android:layout_toRightOf="@+id/iv_noattestation_terraceicon" >
+
+                <TextView
+                    android:id="@+id/tv_noattestation_terracename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_79"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_noattestation_terracename"
+                    android:text="其他别名"
+                    android:textColor="#999"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_noattestation_terracename2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_noattestation_terracename"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_79"
+                    android:text="环融，环融贵金属"
+                    android:textColor="#333"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_80"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/rl_noattestation1"
+            android:background="#f1f2f3" />
+
+        <RelativeLayout
+            android:id="@+id/rel_noattestation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_80"
+            android:visibility="gone" >
+
+            <LinearLayout
+                 style="@style/background_line"
+                android:id="@+id/linl_noattestation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_agent_terrace1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:text="代理平台"
+                    android:textColor="#999" />
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_noattestation_agent_terrace"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#183e60"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/background_line"
+                android:id="@+id/linl_noattestation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_mem_sn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会员编号"
+                    android:textColor="#999" />
+
+                <TextView
+                     style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_mem_sn"
+                   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#183e60"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            
+            <LinearLayout
+                style="@style/background_line"
+                android:id="@+id/linl_noattestation3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_regulators1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="监管机构"
+                    android:textColor="#999" />
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_regulators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#333" />
+            </LinearLayout>
+            
+            <LinearLayout
+                style="@style/background_line"
+                android:id="@+id/linl_noattestation4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation3"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_business_licence1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营业执照"
+                    android:textColor="#999" />
+
+                <ImageView
+                    style="@style/gravity_line"
+                    android:id="@+id/iv_noattestation_business_licence"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/background_line"
+                android:id="@+id/linl_noattestation5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation4"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_code_certificate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机构代码证"
+                    android:textColor="#999" />
+
+                <ImageView
+                     style="@style/gravity_line"
+                    android:id="@+id/iv_noattestation_code_certificate"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            
+            <LinearLayout
+                style="@style/background_line"
+                android:id="@+id/linl_noattestation6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation5"
+                android:orientation="horizontal" >
+
+                <TextView
+                     style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_qualification_certificate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="资质证明"
+                    android:textColor="#999" />
+
+                <ImageView
+                     style="@style/gravity_line"
+                    android:id="@+id/iv_noattestation_qualification_certificate"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/linl_noattestation7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation6"
+               style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_phone1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话"
+                    android:textColor="#999" />
+
+                <TextView
+                      style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_noattestation8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation7"
+               style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_sito_officiale1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官方网站"
+                    android:textColor="#999" />
+
+                <TextView
+                     style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_sito_officiale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_noattestation9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation8"
+                style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_record_officiale1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官网备案"
+                    android:textColor="#999" />
+
+                <TextView
+                     style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_record_officiale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_noattestation10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation9"
+                style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_registered_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系地址"
+                    android:textColor="#999" />
+
+                <TextView
+                     style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_registered_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#333" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView 
+            android:id="@+id/iv_noattestation_icon"
+                android:layout_below="@+id/rel_noattestation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/open"
+                />
+        <!-- 会员单位 -->
+        <include 
+            android:id="@+id/ic_vip"
+            android:visibility="gone"
+            android:layout_below="@+id/iv_noattestation_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           layout="@layout/activity_vip"
+            />
+    </RelativeLayout>
+    
+    <!-- 评论表头 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rel_noattestation3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/darkterrace_hread_select3" >
+
+            <TextView
+                android:id="@+id/tv_noattestation_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="网友评论"
+                android:textColor="#3dafea" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_noattestation4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_noattestation_exosure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="网友曝光" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_noattestation5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_noattestation_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="媒体报道"
+                android:textColor="#000" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/activity_title" />
+
+    <!-- 头像 -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_title"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rl_icon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80_dip"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/goods_list_border" >
+
+                <TextView
+                    android:id="@+id/icon_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/icon_name"
+                    android:textSize="18sp" />
+
+                <com.huanrong.searchdarkvip.view.stone.customview.CircularImage
+                    android:id="@+id/icon_value"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/avatar" />
+            </RelativeLayout>
+
+            <!-- 昵称 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_80_dip"
+                android:layout_below="@+id/rl_icon"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/goods_list_border" >
+
+                <TextView
+                    android:id="@+id/name_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/name_value"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <EditText
+                    android:id="@+id/name_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/name_key"
+                    android:background="@null"
+                    android:hint="@string/ed_update_name"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/small_middle_text_size" />
+            </RelativeLayout>
+            <!-- 绑定手机 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_80_dip"
+                android:layout_below="@+id/rl_name" >
+
+                <TextView
+                    android:id="@+id/phone_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/phone_value"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/phone_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/phone_key"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <!-- 性别 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_80_dip"
+                android:layout_below="@+id/rl_phone"
+                android:background="@drawable/goods_list_border" >
+
+                <TextView
+                    android:id="@+id/sex_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/sex_value"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <RadioGroup
+                    android:id="@+id/rg_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@+id/sex_key"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/man"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@null" />
+
+                    <RadioButton
+                        android:id="@+id/rb_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="@string/woman"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@null" />
+                </RadioGroup>
+            </RelativeLayout>
+            <!-- 生日 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80_dip"
+                android:layout_below="@+id/rl_sex"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/goods_list_border" >
+
+                <TextView
+                    android:id="@+id/birthday_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/birthday_value"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/birthday_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/birthday_key"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/small_middle_text_size" />
+
+                <ImageView
+                    android:id="@+id/check_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/rl_jump" />
+            </RelativeLayout>
+            <!-- 职业 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_work"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_80_dip"
+                android:layout_below="@+id/rl_birthday"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/goods_list_border" >
+
+                <TextView
+                    android:id="@+id/work_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/work_value"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <EditText
+                    android:id="@+id/work_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/work_key"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/small_middle_text_size" />
+            </RelativeLayout>
+            <!-- 所在地 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80_dip"
+                android:layout_below="@+id/rl_work"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/goods_list_border" >
+
+                <TextView
+                    android:id="@+id/address_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/address_value"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/address_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/address_key"
+                    android:layout_toLeftOf="@+id/check_address"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/small_middle_text_size" />
+
+                <ImageView
+                    android:id="@+id/check_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/rl_jump" />
+            </RelativeLayout>
+            <!-- 提交 -->
+
+            <ImageView
+                android:id="@+id/iv_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_address"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/bt_submit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_below="@+id/iv_submit" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4"
+    tools:context="${packageName}.${activityClass}" >
+
+    <!-- 登录显示 -->
+
+    <RelativeLayout
+        android:id="@+id/accuntbinding_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/accountbinding_login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="您已通过微信登录口碑"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/accountbinding_usericon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/accountbinding_login_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/avatar" />
+    </RelativeLayout>
+    <!-- 手机号码 -->
+
+    <RelativeLayout
+        android:id="@+id/rel_accountbinding_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/accuntbinding_login"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/goods_list_border"
+        android:paddingBottom="0dp" >
+
+        <TextView
+            android:id="@+id/accountbinding_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/user_phone"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/accountbinding_ed_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/accountbinding_phone"
+            android:background="@null"
+            android:hint="@string/ed_user_phone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- 登录密码 -->
+
+    <RelativeLayout
+        android:id="@+id/rel_accountbinding_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rel_accountbinding_phone"
+        android:background="@drawable/goods_list_border"
+        android:paddingTop="0dp" >
+
+        <TextView
+            android:id="@+id/accountbinding_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/user_pwd_2"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/accountbinding_ed_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/accountbinding_pwd"
+            android:background="@null"
+            android:hint="@string/ed_user_pwd_2"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- 注册协议 -->
+
+    <RelativeLayout
+        android:id="@+id/rel_accountbinding_clause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_accountbinding_pwd"
+        android:layout_marginTop="15dp" >
+
+        <CheckBox
+            android:id="@+id/accountbinding_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/clause_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:id="@+id/accountbinding_watch_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/accountbinding_clause"
+            android:text="@string/clause_content"
+            android:textColor="#6FAECF"
+            android:textSize="@dimen/small_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/accuntbinding_binding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_accountbinding_clause"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/accountbinding1" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/accuntbinding_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accuntbinding_binding"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/accountbinding2" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/bind_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+
+    <LinearLayout
+        android:id="@+id/ll_wheel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.huanrong.searchdarkvip.widget.WheelView
+            android:id="@+id/wheel_shen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.huanrong.searchdarkvip.widget.WheelView
+            android:id="@+id/wheel_shi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.huanrong.searchdarkvip.widget.WheelView
+            android:id="@+id/wheel_qu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ll_wheel"
+        android:layout_margin="5dp"
+        android:background="#ffffffff"
+        android:text="确定" />
+
+</RelativeLayout>

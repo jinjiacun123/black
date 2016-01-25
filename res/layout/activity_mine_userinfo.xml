@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2" >
+
+            <com.huanrong.searchdarkvip.view.stone.customview.CircularImage
+                android:id="@+id/user_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tv_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" >
+
+            <RelativeLayout
+                android:id="@+id/rl_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/phone_value"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_phone"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/sex_value"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sex"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/birthday_value"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_birthday"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/work_value"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_work"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/address_value"
+                    android:textSize="@dimen/micro_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/rl_key" >
+
+                <TextView
+                    android:id="@+id/tv_phone_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_sex_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_phone_value"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_birthday_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sex_value"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_work_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_birthday_value"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_address_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/tv_work_value"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/micro_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/update_info" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ll_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/good_list_around_border" >
+
+        <android.support.v4.app.FragmentTabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.v4.app.FragmentTabHost>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- </RelativeLayout> -->
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <FrameLayout
+        android:id="@+id/fl_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_title"
+        android:background="#F2F2F4"
+        android:visibility="invisible" >
+    </FrameLayout>
+
+</RelativeLayout>

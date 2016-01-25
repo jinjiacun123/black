@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:textColor="@drawable/tab_change_textcolor"
+        android:textSize="@dimen/small_text_size" />
+
+    <ImageView
+        android:layout_below="@+id/tv_text"
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/goods_tab_buttom_change_page" />
+</LinearLayout>

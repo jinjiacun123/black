@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 是黑平台 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#414141"
+        android:paddingBottom="0dp" >
+
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:id="@+id/tv_darkterrace_text1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="该公司为“黑平台”"
+            android:gravity="center_horizontal"
+            android:textColor="#ffff00"
+            android:layout_margin="15dp"
+            android:textSize="23sp" />
+        
+                <RelativeLayout 
+                    android:id="@+id/iv_darkterrace_adddark"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                   android:layout_marginBottom="20dp"
+                    >
+                <LinearLayout                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_centerHorizontal="true"
+                    android:background="@drawable/dark_getdark"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="xxxx"
+                        android:visibility="invisible"
+                         />
+               <TextView
+                        android:id="@+id/tv_darkterrace_hraad_havadarknumber"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffff00"
+                        android:singleLine="true"
+                         /></LinearLayout>
+                </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_78"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#676767"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_darktrerrace1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_78"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:id="@+id/tv_darkterrace_hraad_havadark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="已加黑"
+                        android:textColor="#e2e2e2" />
+
+                    <TextView
+                        android:id="@+id/tv_darkterrace_hraad_havadarknumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_darkterrace_hraad_havadark"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffff00" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/darkterrace_hread_select" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:id="@+id/tv_darkterrace_hraad_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="已评论"
+                        android:textColor="#e2e2e2" />
+
+                    <TextView
+                        android:id="@+id/tv_darkterrace_hraad_commentnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_darkterrace_hraad_comment"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffff00" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:id="@+id/tv_darkterrace_hraad_exosure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="已曝光"
+                        android:textColor="#e2e2e2" />
+
+                    <TextView
+                        android:id="@+id/tv_darkterrace_hraad_exosurenumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_darkterrace_hraad_exosure"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffff00" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_darktrerrace1"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <!-- 平台信息 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingTop="0dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_darkterrace1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_darkterrace_terraceicon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_images"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/darkterrace3" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/iv_images"
+                android:layout_toRightOf="@+id/iv_darkterrace_terraceicon" >
+
+                <TextView
+                    android:id="@+id/tv_darkterrace_terracename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_79"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_darkterrace_terracename"
+                    android:text="其他别名"
+                    android:textColor="#999"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_darkterrace_terracename2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_darkterrace_terracename"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_79"
+                    android:textColor="#333"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_80"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/rl_darkterrace1"
+            android:background="#f1f2f3" />
+
+        <!--  android:background="@drawable/darkterrace6" -->
+        <RelativeLayout
+            android:id="@+id/rel_darkterrace2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_80"          
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/linl_darktrerrace1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+              style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_agent_terrace1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="代理平台"
+                    android:textColor="#999" />
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_agent_terrace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#183e60"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_darktrerrace2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_darktrerrace1"
+                android:layout_marginLeft="5dp"
+               style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_mem_sn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会员编号"
+                    android:textColor="#999" />
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_mem_sn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#183e60"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/linl_noattestation4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_darktrerrace2"
+                android:layout_marginLeft="5dp"
+                style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_business_licence1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营业执照"
+                    android:textColor="#999" />
+
+                <ImageView   style="@style/gravity_line"
+                    android:id="@+id/iv_noattestation_business_licence"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:src="@drawable/conmpany_icon_a" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_noattestation5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation4"
+                android:layout_marginLeft="5dp"
+                 style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_noattestation_code_certificate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机构代码证"
+                    android:textColor="#999" />
+
+                <ImageView   style="@style/gravity_line"
+                    android:id="@+id/iv_noattestation_code_certificate"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_darktrerrace3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_noattestation5"
+                android:layout_marginLeft="5dp"
+                style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_regulators1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="监管机构"
+                    android:textColor="#999" />
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_regulators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_darktrerrace4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_darktrerrace3"
+                android:layout_marginLeft="5dp"
+                style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_phone1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话"
+                    android:textColor="#999" />
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_darktrerrace5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_darktrerrace4"
+                android:layout_marginLeft="5dp"
+                style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_sito_officiale1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官方网站"
+                    android:textColor="#999" />
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_sito_officiale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#3dafea" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_darktrerrace6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_darktrerrace5"
+                android:layout_marginLeft="5dp"
+                style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView    style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_record_officiale1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官网备案"
+                    android:textColor="#999" />
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_record_officiale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linl_darktrerrace7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linl_darktrerrace6"
+                android:layout_marginLeft="5dp"
+                 style="@style/background_line"
+                android:orientation="horizontal" >
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_registered_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系地址"
+                    android:textColor="#999" />
+
+                <TextView   style="@style/gravity_line"
+                    android:id="@+id/tv_darkterrace_registered_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#333" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView 
+            android:id="@+id/iv_darkterrace_icon"
+                android:layout_below="@+id/rel_darkterrace2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/open"
+                />
+        
+        <!-- 会员单位 -->
+        <include 
+            android:id="@+id/ic_vip"
+            android:visibility="gone"
+            android:layout_below="@+id/iv_darkterrace_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           layout="@layout/activity_vip"
+            />
+    </RelativeLayout>
+
+    <!-- 评论表头 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rel_darkterrace3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/darkterrace_hread_select3" >
+
+            <TextView
+                android:id="@+id/tv_darkterrace_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="网友评论"
+                android:textColor="#3dafea" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_darkterrace4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_darkterrace_exosure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="网友曝光" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_darkterrace5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_darkterrace_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="媒体报道"
+                android:textColor="#000" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

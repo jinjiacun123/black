@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_border" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/get_ok" />
+
+        <LinearLayout
+            android:id="@+id/ll_classify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_border"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="分类:"
+                android:textSize="@dimen/small_middle_text_size" />
+
+            <RadioGroup
+                android:id="@+id/rg_group1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_classify1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="全部"
+                    android:textSize="@dimen/small_text_size" />
+
+                <RadioButton
+                    android:id="@+id/rb_classify2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公司"
+                    android:textSize="@dimen/small_text_size" />
+
+                <RadioButton
+                    android:id="@+id/rb_classify3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平台"
+                    android:textSize="@dimen/small_text_size" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll_industry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="所属行业:"
+                    android:textSize="@dimen/small_middle_text_size" />
+
+                <RadioGroup
+                    android:id="@+id/rg_group2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="11dp" >
+
+                    <RadioButton
+                        android:id="@+id/rb_industry1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="全部"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/rb_industry2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="外汇"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/rb_industry3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="大宗商品"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/rb_industry4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其他"
+                        android:textSize="@dimen/small_text_size" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

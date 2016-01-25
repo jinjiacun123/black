@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/activity_title" />
+
+    <!-- 用户登录 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/ic_title"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/goods_list_border"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/login_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/login" />
+
+        <TextView
+            android:id="@+id/login_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/login_icon"
+            android:text="@string/login_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/login_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rl_jump" />
+    </RelativeLayout>
+    <!-- 登陆之后替换的背景 -->
+    <!-- 用户头像 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_background1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/ic_title"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/goods_list_border"
+        android:visibility="gone" >
+
+        <com.huanrong.searchdarkvip.view.stone.customview.CircularImage
+            android:id="@+id/background_icon1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/default_icon" />
+
+        <TextView
+            android:id="@+id/background_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/background_icon1"
+            android:layout_toLeftOf="@+id/background_jump1"
+            android:singleLine="true"
+            android:text="@string/background_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/background_jump1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rl_jump" />
+    </RelativeLayout>
+    <!-- 账户管理 -->
+
+    <RelativeLayout
+        android:layout_marginTop="-0.5dp"
+        android:id="@+id/rl_background2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rl_background1"
+        android:background="@drawable/goods_list_border"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/background_icon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/manage" />
+
+        <TextView
+            android:id="@+id/background_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/background_icon2"
+            android:text="@string/manage_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/background_jump2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rl_jump" />
+    </RelativeLayout>
+
+    <!-- 未登录显示的布局 -->
+    <!-- 用户注册 -->
+
+    <RelativeLayout
+        android:layout_marginTop="-0.5dp"
+        android:id="@+id/rl_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rl_login"
+        android:background="@drawable/goods_list_border"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/register_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/register_1" />
+
+        <TextView
+            android:id="@+id/register_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/register_icon"
+            android:text="@string/register_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/register_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rl_jump" />
+    </RelativeLayout>
+    <!-- 检测新版 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_detection"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rl_register"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/goods_list_border" >
+
+        <ImageView
+            android:id="@+id/detection_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/detection" />
+
+        <TextView
+            android:id="@+id/detection_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/detection_icon"
+            android:text="@string/detection_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/detection_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rl_jump" />
+    </RelativeLayout>
+    
+    <!-- 意见反馈 -->
+     <RelativeLayout
+        android:id="@+id/rl_feedback"
+        android:layout_marginTop="-0.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rl_detection"
+        android:background="@drawable/goods_list_border" >
+
+        <ImageView
+            android:id="@+id/feedback_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/feedback" />
+
+        <TextView
+            android:id="@+id/feedback_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/feedback_icon"
+            android:text="@string/feedback_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/feedback_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rl_jump" />
+    </RelativeLayout>
+    <!-- 关于搜黑 -->
+
+    <RelativeLayout
+        android:layout_marginTop="-0.5dp"
+        android:id="@+id/rl_us"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rl_feedback"
+        android:background="@drawable/goods_list_border" >
+
+        <ImageView
+            android:id="@+id/us_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/us" />
+
+        <TextView
+            android:id="@+id/us_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/us_icon"
+            android:text="@string/us_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/us_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rl_jump" />
+    </RelativeLayout>
+</RelativeLayout>

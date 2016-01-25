@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/iv_comment_user_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_comment_user_icon"
+        android:layout_marginLeft="5dp"
+        android:text="评论"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_build"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/iv_comment_user_icon"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/build_icon"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_build"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="xxx"
+            android:textSize="@dimen/micro_text_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

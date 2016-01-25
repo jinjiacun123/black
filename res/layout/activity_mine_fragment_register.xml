@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/activity_title" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="手机号仅用于登录和找回密码,不会向第三方公开"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/small_text_size" />
+
+    <!-- 手机号码 -->
+
+    <RelativeLayout
+        android:id="@+id/register_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/goods_list_border" >
+
+        <TextView
+            android:id="@+id/register_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/user_phone"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/register_ed_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/register_phone"
+            android:background="@null"
+            android:hint="@string/ed_user_phone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- 登录密码 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:paddingTop="0dp"
+        android:layout_marginTop="-1dp"
+        android:layout_below="@+id/register_phone"
+        android:background="@drawable/goods_list_border" >
+
+        <TextView
+            android:id="@+id/register_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/user_pwd_2"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/register_ed_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/register_pwd"
+            android:background="@null"
+            android:hint="@string/ed_user_pwd_2"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    <!-- 验证码 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_code"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rl_pwd"
+        android:layout_marginTop="-1dp"
+        android:background="@drawable/goods_list_border" >
+
+        <TextView
+            android:id="@+id/register_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/code_name"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/register_ed_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/register_code"
+            android:background="@null"
+            android:hint="@string/ed_code_name"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/register_code_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:src="@drawable/iv_code2" />
+    </RelativeLayout>
+    <!-- 注册协议 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_clause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_code"
+        android:layout_marginTop="15dp" >
+
+        <CheckBox
+            android:id="@+id/cb_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/clause_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:id="@+id/watch_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cb_clause"
+            android:text="@string/clause_content"
+            android:textColor="#6FAECF"
+            android:textSize="@dimen/small_text_size" />
+    </RelativeLayout>
+
+    <!-- 注册按钮 -->
+
+    <ImageView
+        android:id="@+id/iv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_clause"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/register" />
+
+    <ProgressBar
+        android:id="@+id/pb_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

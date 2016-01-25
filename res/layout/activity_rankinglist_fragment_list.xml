@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_content"
+    android:background="@drawable/rankinglist_border" >
+
+    <TextView
+        android:id="@+id/tv_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="1"
+        android:textColor="#E85823"
+        android:textSize="@dimen/medium_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/rr_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_numbers"
+        android:layout_centerVertical="true"
+         >
+
+        <ImageView
+            android:id="@+id/iv_images"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+             />
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_images"
+            android:text="最新评论:"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="@dimen/micro_text_size"
+            android:textColor="@color/blue"
+             />
+        
+        <TextView 
+            android:id="@+id/tc_comment_value"
+            android:textColor="#000000"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/tv_talk"
+            android:layout_below="@+id/iv_images"
+            android:layout_toLeftOf="@+id/iv_get_dark"
+            android:layout_marginRight="5dp"
+            android:textSize="@dimen/micro_text_size"
+            />
+
+        <RelativeLayout
+            android:layout_toLeftOf="@+id/iv_get_dark"
+            android:layout_marginRight="5dp"
+            android:id="@+id/rl_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_images"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+             >
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/tv_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="xxxxxxxxx"
+                android:textSize="@dimen/small_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_names"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_alias_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="其他名称:"
+                    android:textSize="@dimen/micro_text_size" />
+
+                <TextView
+                    android:textColor="#000000"
+                    android:id="@+id/tv_alias_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_alias_key"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="@dimen/micro_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/tv_submit_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xxxxxxxx"
+            android:textSize="@dimen/micro_text_size"  
+            android:layout_marginTop="12dp"    
+            android:layout_toRightOf="@+id/rl_content" 
+            android:layout_toLeftOf="@+id/tv_ci" 
+            android:layout_marginRight="5dp"
+            android:singleLine="true"  
+            android:textColor="#f00"          
+             />
+        
+        <TextView
+            android:textColor="#000000"
+             android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" 
+            android:layout_marginTop="12dp"
+            android:id="@+id/tv_ci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"                   
+            android:text="次"
+            android:textSize="@dimen/micro_text_size" /> 
+        
+         <ImageView
+            android:id="@+id/iv_get_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/get_dark" 
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            />
+                
+    </RelativeLayout>                                                 
+    
+</RelativeLayout>

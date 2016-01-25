@@ -1,0 +1,348 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    tools:context="${packageName}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:background="#292929" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:padding="0dp" 
+            android:background="@color/white">
+
+            <com.huanrong.searchdarkvip.view.stone.customview.XListView
+                android:id="@+id/lv_darkterrace"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"
+                android:listSelector="#00000000" />
+
+            <TextView
+                android:id="@+id/tv_darktext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lv_darkterrace"
+                android:background="#fff"
+                android:gravity="center_vertical|center_horizontal"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_darkterrace_rel3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="#292929" >
+
+            <RelativeLayout
+                android:id="@+id/iv_darkterrace_speak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp" >
+
+                <ImageView
+                    android:id="@+id/iv_mine"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/mine_a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_mine"
+                    android:text="我来说两句"
+                    android:textColor="@color/white_1"
+                    android:textSize="@dimen/small_middle_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp" >
+
+                <ImageView
+                    android:id="@+id/iv_exosure"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/exosure_b" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_exosure"
+                    android:text="我要曝光"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/small_middle_text_size" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_darkterrace_share1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/share1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_darkterrace_speak1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/iv_darkterrace_share1"
+                android:src="@drawable/speak"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 分享选择框 -->
+
+    <FrameLayout
+        android:id="@+id/fl_darkterrace_fl22"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#4c000000"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4c000000" >
+
+            <LinearLayout
+                android:id="@+id/rel_darkterrace_rl22"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请选择好友还是朋友圈"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/reg_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_style_one_normal"
+                    android:text="分享到好友" />
+
+                <Button
+                    android:id="@+id/goto_send_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_style_one_normal"
+                    android:text="分享到朋友圈" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_darkterrace_rl21"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/rel_darkterrace_rl22" >
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- 评论框 -->
+
+    <FrameLayout
+        android:id="@+id/fl_darkterrace_fl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#4c000000"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4c000000" >
+
+            <RelativeLayout
+                android:id="@+id/rel_darkterrace_rl2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_above="@+id/rel_noattestation_rl3"
+                android:background="#fff" >
+
+                <RelativeLayout
+                    android:id="@+id/lin_darkterrace_lin3"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp" >
+
+                    <RadioGroup
+                        android:id="@+id/rg_noattextation_commenttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb_darkterrace_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点赞" />
+
+                        <RadioButton
+                            android:id="@+id/rb_darkterrace_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="提问"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/rb_darkterrace_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="加黑" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_darkterrace_lin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/lin_darkterrace_lin3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/noattestation_comment_select" >
+
+                    <EditText
+                        android:id="@+id/et_darkterrace_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="3dp"
+                        android:background="@null"
+                        android:gravity="top" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lin_darkterrace_lin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/lin_darkterrace_lin1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_darkterrace_comment_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/expression" />
+
+                    <ImageView
+                        android:id="@+id/iv_darkterrace_comment_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/iv_darkterrace_comment_icon1"
+                        android:src="@drawable/noattesxtation_1" />
+
+                    <ImageView
+                        android:id="@+id/iv_darkterrace_comments"
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/comments" />
+
+                    <CheckBox
+                        android:id="@+id/cb_noattestatiob_anon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_noattestatiob_anon" />
+
+                    <TextView
+                        android:id="@+id/tv_noattestatiob_anon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/iv_darkterrace_comments"
+                        android:text="匿名" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_noattestation_rl3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/ic_faces"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/custom_layout"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/ic_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/custom_updateload_images"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_darkterrace_rl1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/rel_darkterrace_rl2" >
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <!-- 加载框 -->
+
+</FrameLayout>

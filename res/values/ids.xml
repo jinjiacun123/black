@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="xl_content"></item>
+    <item type="id" name="tv_left_0"></item>
+    <item type="id" name="tv_left_1"></item>
+    <item type="id" name="tv_left_2"></item>
+    <item type="id" name="tv_left_3"></item>
+    <item type="id" name="tv_left_4"></item>
+    <item type="id" name="tv_left_5"></item>
+    <item type="id" name="tv_right_0"></item>
+    <item type="id" name="tv_right_1"></item>
+    <item type="id" name="tv_right_2"></item>
+    <item type="id" name="tv_right_3"></item>
+    <item type="id" name="tv_right_4"></item>
+    <item type="id" name="tv_right_5"></item>
+</resources>

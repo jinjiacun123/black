@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4">
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/ic_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/activity_title" />
+
+    <!-- 新密码 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/ic_title"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/goods_list_border" >
+
+        <TextView
+            android:id="@+id/fp_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/pwd_name"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/fp_ed_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/fp_pwd"
+            android:background="@null"
+            android:hint="@string/ed_pwd_name"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/small_middle_text_size" />
+    </RelativeLayout>
+    <!-- 确认密码 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_re_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_80_dip"
+        android:layout_below="@+id/rl_pwd"
+        android:background="@drawable/goods_list_border" >
+
+        <TextView
+            android:id="@+id/fp_re_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/re_pwd_name"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/fp_re_ed_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/fp_re_pwd"
+            android:background="@null"
+            android:hint="@string/re_ed_pwd_name"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/small_middle_text_size" />
+    </RelativeLayout>
+    <!-- 确定 -->
+
+    <ImageView
+        android:id="@+id/iv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_re_pwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ok" />
+
+    <ProgressBar
+        android:id="@+id/pb_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
