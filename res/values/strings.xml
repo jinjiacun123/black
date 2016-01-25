@@ -1,8 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">black</string>
-    <string name="action_settings">Settings</string>
+    <!--自定义dialog-->
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+    
+    <string name="app_name">口碑投资</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="title_activity_no_storage">NoStorageActivity</string>
+    <string name="title_activity_qualified_terrace">QualifiedTerraceActivity</string>
+    <string name="title_activity_no_attestation">NoAttestationActivity</string>
+    <string name="title_activity_dark_terrace">DarkTerraceActivity</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- 排行榜及筛选列表 -->
+    <string name="rankinglist_left">共为您查到</string>
+    <string name="rankinglist_right">家公司、平台</string>
+    <string name="classify_name">分类</string>
+    <!-- 我的 -->
+    <string name="login_name">用户登录</string>
+    <string name="register_name">新用户注册</string>
+    <string name="manage_name">账户管理</string>
+    <string name="background_name">欢迎您,注册用户的昵称</string>
+    <string name="detection_name">检测版本</string>
+    <string name="us_name">关于口碑</string>
+    <string name="feedback_name">意见反馈</string>
+    <string name="image_left">扫一扫,关注最新信息</string>
+    <string name="image_right">下载app,挑选优质平台</string>
+    <!-- 登录 -->
+    <string name="user_name">账    号:</string>
+    <string name="ed_user_name">请输入注册手机号</string>
+    <string name="user_pwd">密     码:</string>
+    <string name="ed_user_pwd">请输入登录密码</string>
+    <string name="checkbox_name">显示密码</string>
+    <string name="find_name">忘记密码?</string>
+    <string name="ed_content">亲,您的意见是口碑前进动力!不超过200字</string>
+    <string name="ed_contact">QQ/邮箱/手机</string>
+    <string name="ed_left">您的</string>
+    <string name="ed_center">联系方式</string>
+    <string name="ed_right">仅工作人员可见,以便我们将处理结果通知给您。</string>
+    
+    <!-- 注册 -->
+    <string name="user_phone">手机号码:</string>
+    <string name="ed_user_phone">请输入手机号码</string>
+    <string name="user_pwd_2">登录密码:</string>
+    <string name="ed_user_pwd_2">请输入登录密码</string>
+    <string name="code_name">验证码:</string>
+    <string name="ed_code_name">请输入验证码</string>
+    <string name="clause_name">我已阅读并同意</string>
+    <string name="clause_content">《口碑网用户服务协议》</string>
+    <!-- 找回密码 -->
+    <string name="fp_phone">请输入注册/绑定手机号码</string>
+    <string name="phone_left">请输入手机</string>
+    <string name="phone_right">收到的验证码</string>
+    <string name="ed_phone">请输入获取的验证码</string>
+    <string name="pwd_name">新密码:</string>
+    <string name="ed_pwd_name">密码为6~16位位数字、字母、符号</string>
+    <string name="re_pwd_name">密码确认:</string>
+    <string name="re_ed_pwd_name">请再次输入密码</string>
+    <string name="get_code">获取验证码</string>
+    <string name="image_code">图形验证码</string>
+    <!-- 个人信息 -->
+    <string name="name_value">用户昵称:</string>
+    <string name="phone_value">手机:</string>
+    <string name="sex_value">性别:</string>
+    <string name="birthday_value">生日:</string>
+    <string name="work_value">职业:</string>
+    <string name="work_hint">无</string>
+    <string name="address_value">所在地:</string>
+    <!-- 修改密码 -->
+    <string name="old_pwd">原密码:</string>
+    <string name="old_pwd_hint">密码为6~16位数字、字母、符号</string>
+    <string name="new_pwd">新密码:</string>
+    <string name="re_new_pwd">密码确认:</string>
+    <string name="re_new_pwd_hint">请再次输入密码</string>
+    <!-- 个人信息修改 -->
+    <string name="ed_update_name">请输入昵称</string>
+    <string name="ed_address_name">请输入所在地</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="icon_name">头像</string>
+    <!-- 曝光 -->
+    <string name="nature_name">公司性质:</string>
+    <string name="industry_name">所属行业:</string>
+    <string name="name">公司名称:</string>
+    <string name="ed_name">请输入公司名</string>
+    <string name="money_name">涉及金额:</string>
+    <string name="ed_money_name">请输入涉及金额</string>
+    <string name="url_name">公司网址:</string>
+    <string name="ed_url_name">请输入网址</string>
+    <string name="content_name">曝光内容:</string>
+    <string name="ed_content_name">请输入曝光内容</string>
+    <string name="up_name">附件上传:</string>
+    <string name="no_up_name">未选择文件</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_comment_reply">CommentReplyActivity</string>
+    <string name="title_activity_exosure_reply">ExosureReplyActivity</string>
+    <string name="title_activity_news_text">NewsTextActivity</string>
+    <string name="title_activity_news_reply">NewsReplyActivity</string>
+    <string name="title_activity_win_xin">WinXinActivity</string>
+    <string name="title_activity_wxentry">WXEntryActivity</string>
+    <string name="errcode_success">分享微信成功</string>
+    <string name="errcode_cancel">分享微信已取消</string>
+    <string name="errcode_deny">分享微信失败</string>
+    <string name="errcode_unknown">分享微信失败</string>
+    <string name="errcode_success1">登录成功</string>
+    <string name="errcode_cancel1">登录已取消</string>
+    <string name="errcode_deny1">登录失败</string>
+    <string name="errcode_unknown1">登录失败</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_account_binding">AccountBindingActivity</string>
+    <!-- 会员单位 -->
+    <string name="vip_left">会员单位  ( 共</string>
+    <string name="vip_right">家  )</string>
+    <string name="vip_more">更多</string>
+<string name="register_name_digits">  
+  "".@0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ  
+</string> 
 </resources>
