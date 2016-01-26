@@ -7,6 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.example.black.R;
+import com.example.black.lib.FileUtils;
 import com.example.black.view.custom.ChatEmoji;
 
 import android.content.Context;

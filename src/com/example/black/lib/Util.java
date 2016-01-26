@@ -13,6 +13,13 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.black.R;
+import com.example.black.lib.model.Company;
+import com.example.black.lib.model.DarkTerraceActivity;
+import com.example.black.lib.model.NoAttestationActivity;
+import com.example.black.lib.model.NoStorageActivity;
+import com.example.black.lib.model.QualifiedTerraceActivity;
+
 import junit.framework.Assert;
 import android.content.Context;
 import android.content.Intent;

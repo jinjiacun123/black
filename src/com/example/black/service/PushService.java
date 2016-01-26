@@ -1,6 +1,5 @@
 package com.example.black.service;
 
-import com.example.black.R;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,6 +22,8 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.app.Service;
 
+import com.example.black.R;
+import com.example.black.act.CommentReplyActivity;
 /*lib*/
 import com.example.black.lib.PushInfo;
 import com.example.black.lib.JsonUtil;
@@ -31,7 +32,6 @@ import com.example.black.lib.Util;
 import com.example.black.lib.mqtt.MqttV3Service;
 /*lib.model*/
 import com.example.black.lib.model.Reply_Activity;
-import com.example.black.lib.model.CommentReplyActivity;
 import com.example.black.lib.model.DarkTerraceActivity;
 import com.example.black.lib.model.NoAttestationActivity;
 import com.example.black.lib.model.QualifiedTerraceActivity;

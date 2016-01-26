@@ -1,7 +1,5 @@
 package com.example.black.main;
 
-import com.example.black.R;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings.Secure;
@@ -16,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.black.R;
 /*lib*/
 import com.example.black.lib.HomePageFragment;
 import com.example.black.lib.RankingListFragment;

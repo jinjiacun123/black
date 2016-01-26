@@ -1,8 +1,8 @@
 package com.example.black.act;
 
-import com.example.black.R;
 import java.util.List;
 
+import com.example.black.R;
 import com.example.black.lib.model.NatureAndIndustry;
 
 import android.content.Context;

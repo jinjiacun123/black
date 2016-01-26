@@ -36,15 +36,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * �ʺŰ�
+ * 锟绞号帮拷
  * 
  * @author Admin
  * 
  */
 public class AccountBindingActivity  extends Activity {
-	private ActionBar actionBar;// activity��actionbar
-	private ImageView iv_comment_reply_action_icon;// ���˰�ť
-	private TextView tv_content_centent;// ���˰�ť
+	private ActionBar actionBar;// activity锟斤拷actionbar
+	private ImageView iv_comment_reply_action_icon;// 锟斤拷锟剿帮拷钮
+	private TextView tv_content_centent;// 锟斤拷锟剿帮拷钮
 	private String openid;
 	private String head_photo;
 	private String nickname;
@@ -56,7 +56,7 @@ public class AccountBindingActivity  extends Activity {
 	private ProgressBar bind_progress;
 	private int platform_type;
 
-	// �˺Ű�(��½)
+	// 锟剿号帮拷(锟斤拷陆)
 	Handler handler = new Handler() {
 		@Override
 		public void handleMessage(android.os.Message msg) {
@@ -64,11 +64,11 @@ public class AccountBindingActivity  extends Activity {
 			case 0:
 				String result = (String) msg.obj;
 				UserInfo userInfo = JsonUtil.getLoginInfo(result);
-				//Log.i("Test-", "΢�Ű�--------->" + userInfo);
+				//Log.i("Test-", "微锟脚帮拷--------->" + userInfo);
 				if (userInfo != null) {
 					switch (userInfo.getIs_sucess()) {
 					case 0:
-						Toast.makeText(getApplicationContext(), "��¼�ɹ�", 0)
+						Toast.makeText(getApplicationContext(), "锟斤拷录锟缴癸拷", 0)
 								.show();
 
 						getSharedPreferences("Login_UserInfo",
@@ -94,25 +94,25 @@ public class AccountBindingActivity  extends Activity {
 						MineFragment_Login.login_page.finish();
 						break;
 					case -1:
-						Toast.makeText(getApplicationContext(), "��¼ʧ��", 0)
+						Toast.makeText(getApplicationContext(), "锟斤拷录失锟斤拷", 0)
 								.show();
 						break;
 					case -2:
-						Toast.makeText(getApplicationContext(), "�������", 0)
+						Toast.makeText(getApplicationContext(), "锟斤拷锟斤拷锟斤拷锟�", 0)
 								.show();
 						break;
 					case -3:
 
 						break;
 					case -4:
-						Toast.makeText(getApplicationContext(), "΢��openid�Ѵ���",
+						Toast.makeText(getApplicationContext(), "微锟斤拷openid锟窖达拷锟斤拷",
 								0).show();
 						break;
 					default:
 						break;
 					}
 				} else {
-					Toast.makeText(getApplicationContext(), "����������ʧ��", 0)
+					Toast.makeText(getApplicationContext(), "锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷失锟斤拷", 0)
 							.show();
 				}
 				bind_progress.setVisibility(View.GONE);
@@ -130,7 +130,6 @@ public class AccountBindingActivity  extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_account_binding);
-		// ����actionbar
 		actionBar = this.getActionBar();
 		new HomePageController().setActionbar(LayoutInflater.from(this)
 				.inflate(R.layout.comment_reply_actionbar, null), actionBar);
@@ -139,7 +138,7 @@ public class AccountBindingActivity  extends Activity {
 		GetIntent();
 	}
 
-	//�ж��ĸ�������
+	//锟叫讹拷锟侥革拷锟斤拷锟斤拷锟斤拷
 	private void GetIntent() {
 		Intent intent = getIntent();
 		if (intent != null) {
@@ -151,46 +150,46 @@ public class AccountBindingActivity  extends Activity {
 			String platform="";
 			switch (platform_type) {
 			case 4:
-				platform="΢��";				
+				platform="微锟斤拷";				
 				break;
 			case 5:
 				platform="QQ";	
 				break;
 			case 6:
-				platform="΢��";	
+				platform="微锟斤拷";	
 				break;
 			default:
 				break;
 			}	
-			accountbinding_login_text.setText("����ͨ��"+platform+"��¼�Ѻ�");
+			accountbinding_login_text.setText("锟斤拷锟斤拷通锟斤拷"+platform+"锟斤拷录锟窖猴拷");
 
 			if (head_photo != null && !"".equals(head_photo)) {
-				//Log.i("Test", "-�õ�������--->" + head_photo);
+				//Log.i("Test", "-锟矫碉拷锟斤拷锟斤拷锟斤拷--->" + head_photo);
 				ImageLoader.getInstance().displayImage(head_photo,
 						accountbinding_usericon,
 						ImageLoaderUtil.init_DisplayImageOptions(0));
 			} else {
-				//Log.i("Test", "-�õ�������--->null");
+				//Log.i("Test", "-锟矫碉拷锟斤拷锟斤拷锟斤拷--->null");
 			}
 		}
 	}
 
 	private void initView() {
-		// ������
+		// 锟斤拷锟斤拷锟斤拷
 		bind_progress = (ProgressBar) findViewById(R.id.bind_progress);
-		// ��Ȩƽ̨
+		// 锟斤拷权平台
 		accountbinding_login_text = (TextView) findViewById(R.id.accountbinding_login_text);
-		// ͷ��
+		// 头锟斤拷
 		accountbinding_usericon = (ImageView) findViewById(R.id.accountbinding_usericon);
-		// �ֻ�����
+		// 锟街伙拷锟斤拷锟斤拷
 		accountbinding_ed_phone = (EditText) findViewById(R.id.accountbinding_ed_phone);
-		// ��½����
+		// 锟斤拷陆锟斤拷锟斤拷
 		accountbinding_ed_pwd = (EditText) findViewById(R.id.accountbinding_ed_pwd);
-		// �û�Э��
+		// 锟矫伙拷协锟斤拷
 		TextView accountbinding_watch_clause = (TextView) findViewById(R.id.accountbinding_watch_clause);
-		// �󶨰�ť
+		// 锟襟定帮拷钮
 		accuntbinding_binding = (ImageView) findViewById(R.id.accuntbinding_binding);
-		// ����
+		// 锟斤拷锟斤拷
 		accuntbinding_skip = (ImageView) findViewById(R.id.accuntbinding_skip);
 
 		accuntbinding_binding.setOnClickListener(new OnClickListener() {
@@ -237,7 +236,7 @@ public class AccountBindingActivity  extends Activity {
 			object.put("passwd", passwd);
 			object.put("nickname", nickname);
 			object.put("head_photo", head_photo);
-			//�Ƿ��ƹ��û�(Ĭ��0��1-Ϊ�ƹ��û�)
+			//锟角凤拷锟狡癸拷锟矫伙拷(默锟斤拷0锟斤拷1-为锟狡癸拷锟矫伙拷)
 			object.put("sem", 1);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -260,7 +259,7 @@ public class AccountBindingActivity  extends Activity {
 		}
 		pairs.add(new BasicNameValuePair("content", object.toString()));
 		new HttpPostThread(pairs, handler, 0).start();
-		//Log.i("Test", "�󶨲���--->" + pairs.toString());
+		//Log.i("Test", "锟襟定诧拷锟斤拷--->" + pairs.toString());
 	}
 
 	private void initActionBar() {
@@ -268,7 +267,7 @@ public class AccountBindingActivity  extends Activity {
 				.findViewById(R.id.iv_comment_reply_action_icon);
 		tv_content_centent = (TextView) this
 				.findViewById(R.id.tv_content_centent);
-		tv_content_centent.setText("�ʺŰ�");
+		tv_content_centent.setText("锟绞号帮拷");
 		iv_comment_reply_action_icon
 				.setOnClickListener(new View.OnClickListener() {
 

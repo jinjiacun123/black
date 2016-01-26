@@ -5,6 +5,15 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import com.example.black.R;
+import com.example.black.act.MineFragment_AboutUs;
+import com.example.black.act.MineFragment_Feedback;
+import com.example.black.act.MineFragment_Update_Pwd;
+import com.example.black.lib.model.MineFragment_UserInfo;
+import com.example.black.lib.model.VersionCode;
+import com.example.black.view.MineFragment_Login;
+import com.example.black.view.MineFragment_Register;
+import com.example.black.view.custom.DialogUtil;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import android.content.Context;

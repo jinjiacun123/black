@@ -31,9 +31,21 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.black.R;
+import com.example.black.lib.AppManager;
+import com.example.black.lib.HttpUrl;
+import com.example.black.lib.HttpPostThread;
+import com.example.black.lib.HttpUtil;
 /*lib*/
 import com.example.black.lib.ImageUtils;
 import com.example.black.lib.JsonUtil;
+import com.example.black.lib.NetworkUtil;
+import com.example.black.lib.PushInfo;
+import com.example.black.lib.Util;
+import com.example.black.service.PushService;
+import com.example.black.view.MineFragment_Update_UserInfo;
+import com.example.black.view.Mine_CommentFragment;
+import com.example.black.view.custom.DialogUtil;
 
 /**
  * 用户信息展示

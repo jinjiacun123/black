@@ -7,18 +7,22 @@ import java.util.Map;
 
 import com.example.black.R;
 import com.example.black.act.PublishComment;
+import com.example.black.lib.AppManager;
 import com.example.black.lib.HttpUtil;
+import com.example.black.lib.ImageUtils;
 import com.example.black.lib.JsonUtil;
 import com.example.black.lib.KeyBoardUtil;
 import com.example.black.lib.NetworkUtil;
 import com.example.black.lib.Util;
 import com.example.black.lib.model.Comment_Company;
 import com.example.black.lib.model.Comment_Company2;
+import com.example.black.lib.model.ExosureImage;
 import com.example.black.lib.model.Exosure_Company;
 import com.example.black.lib.model.FaceAdapter;
 import com.example.black.view.custom.ChatEmoji;
 import com.example.black.view.custom.DialogUtil;
 import com.example.black.view.custom.XListView;
+import com.example.black.view.custom.XListView.IXListViewListener;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -544,7 +548,7 @@ public class All_fragment  extends Fragment implements OnItemClickListener{
 				//获取单条评论信息（企业）
 				String result = (String) msg.obj;
 				Log.i("push", "走4==========>" +  result.toString());
-				company_top = new JsonUitl().getCommentInfo(result);
+				company_top = new JsonUtil().getCommentInfo(result);
 				id = company_top.getId();
 				Log.i("push", "走5==========>" +  company_top.toString());
 				PublishComment.getTopReply_All(extra,company_top,
@@ -554,7 +558,7 @@ public class All_fragment  extends Fragment implements OnItemClickListener{
 			case 1:
 				//获取单条曝光信息（企业）
 				String result_exposal = (String) msg.obj;
-				company_top = new JsonUitl().getInexposalInfo(result_exposal);
+				company_top = new JsonUtil().getInexposalInfo(result_exposal);
 				id = company_top.getId();
 				PublishComment.getTopReply_All(extra,company_top,
 						Util.getLoginType(getActivity()),

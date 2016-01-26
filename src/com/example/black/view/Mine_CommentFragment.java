@@ -1,6 +1,15 @@
-package com.example.black.lib.view;
+package com.example.black.view;
 
 import java.util.List;
+
+import com.example.black.R;
+import com.example.black.act.CommentReplyActivity;
+import com.example.black.lib.HttpUtil;
+import com.example.black.lib.JsonUtil;
+import com.example.black.lib.Util;
+import com.example.black.lib.model.Comment_Company2;
+import com.example.black.view.custom.XListView;
+import com.example.black.view.custom.XListView.IXListViewListener;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,7 +44,7 @@ public class Mine_CommentFragment  extends Fragment {
 			case 0:
 				//首次加载数据
 				String result=(String)msg.obj;
-				companys = new JsonUitl().getMine_Comment(result, getActivity(), getActivity().getIntent().getLongExtra("user_id", -1));
+				companys = new JsonUtil().getMine_Comment(result, getActivity(), getActivity().getIntent().getLongExtra("user_id", -1));
 				if (companys!=null &&companys.size()>0) {
 					adapter = new Mine_CommentAdapter(getActivity(),companys);
 					adapter.sethandler(handler);
@@ -59,7 +68,7 @@ public class Mine_CommentFragment  extends Fragment {
 			case 1:
 				//加载更多
 				String result_more = (String) msg.obj;
-				List<Comment_Company2> companys_more = new JsonUitl().getMine_Comment(result_more, getActivity(), getActivity().getIntent().getLongExtra("user_id", -1));
+				List<Comment_Company2> companys_more = new JsonUtil().getMine_Comment(result_more, getActivity(), getActivity().getIntent().getLongExtra("user_id", -1));
 				if (companys_more!=null && companys_more.size()>0) {
 					companys.addAll(companys_more);
 					adapter.notifyDataSetChanged();
@@ -84,7 +93,7 @@ public class Mine_CommentFragment  extends Fragment {
 			case 2:
 				//刷新数据
 				String result_refush=(String)msg.obj;
-				List<Comment_Company2> companys_refush = new JsonUitl().getMine_Comment(result_refush, getActivity(), getActivity().getIntent().getLongExtra("user_id", -1));
+				List<Comment_Company2> companys_refush = new JsonUtil().getMine_Comment(result_refush, getActivity(), getActivity().getIntent().getLongExtra("user_id", -1));
 				if (companys_refush!=null&&companys_refush.size()>0) {
 						companys.clear();
 						companys.addAll(companys_refush);

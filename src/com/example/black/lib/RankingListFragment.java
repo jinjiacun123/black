@@ -1,5 +1,10 @@
 package com.example.black.lib;
 
+import com.example.black.R;
+import com.example.black.view.RankingList_CommentFragment;
+import com.example.black.view.RankingList_DarkFragment;
+import com.example.black.view.RankingList_ExposureFragment;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

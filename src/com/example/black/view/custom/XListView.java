@@ -1,8 +1,9 @@
 package com.example.black.view.custom;
 
-import com.example.black.R;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import com.example.black.R;
 
 import android.content.Context;
 import android.util.AttributeSet;

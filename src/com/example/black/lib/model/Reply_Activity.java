@@ -1,9 +1,21 @@
 package com.example.black.lib.model;
 
-import com.example.black.R;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.example.black.R;
+import com.example.black.act.PublishComment;
+import com.example.black.lib.AppManager;
+import com.example.black.lib.AsyncBitmapLoader;
+import com.example.black.lib.JsonUtil;
+import com.example.black.lib.NetworkUtil;
+import com.example.black.lib.WeiXinShareController;
+import com.example.black.lib.umeng.UMShareManager;
+import com.example.black.lib.umeng.UMStaticConstant;
+import com.example.black.view.All_fragment;
+import com.example.black.view.Comment_fragment;
+import com.example.black.view.Images_fragment;
+import com.example.black.view.Master_fragment;
 import com.umeng.socialize.controller.UMServiceFactory;
 import com.umeng.socialize.controller.UMSocialService;
 import com.umeng.socialize.media.UMImage;
@@ -125,13 +137,13 @@ public class Reply_Activity extends FragmentActivity{
 			case 0:
 				//获取单条评论信息（企业）
 				String result = (String) msg.obj;
-				company = new JsonUitl().getCommentInfo(result);
+				company = new JsonUtil().getCommentInfo(result);
 				setdata();
 				break;
 			case 1:
 				//获取单条曝光信息（企业）
 				String result_exposal = (String) msg.obj;
-				company = new JsonUitl().getInexposalInfo(result_exposal);
+				company = new JsonUtil().getInexposalInfo(result_exposal);
 				setdata();
 				break;
 			}

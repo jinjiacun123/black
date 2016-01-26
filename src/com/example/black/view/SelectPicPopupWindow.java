@@ -1,6 +1,7 @@
 package com.example.black.view;
 
 import com.example.black.R;
+
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;

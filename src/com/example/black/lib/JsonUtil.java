@@ -24,11 +24,13 @@ import com.example.black.lib.model.RankingList;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.text.TextUtils;
 
 /*lib.model*/
 import com.example.black.lib.model.UserInfo;
 
+@SuppressLint("NewApi")
 public class JsonUtil {
 	private List<Company> companys = null;
 	private List<Comment_Company2> comment_company2s = null;
@@ -1262,5 +1264,113 @@ public class JsonUtil {
 				}
 			}
 			return comment_company2s;
+		}
+		
+		//获取单条曝光信息一级（企业）
+		public Comment_Company2 getInexposalInfo(String result){
+			Comment_Company2 comment_Company2 = null;
+			if(result != null && !result.isEmpty()){
+				try {
+					JSONObject jsonObject = new JSONObject(result);
+					int code = jsonObject.getInt("status_code");
+					if(code == 200){
+						JSONObject object = jsonObject.getJSONObject("content");
+						if(object != null){
+							comment_Company2 = new Comment_Company2();
+							comment_Company2.setId(object.getInt("id"));
+//							comment_Company2.setTitle(object.getString("title"));
+							comment_Company2.setCompany_id(object.getInt("company_id"));
+							comment_Company2.setUser_id(object.getInt("user_id"));
+							comment_Company2.setNickname(object.getString("nickname"));
+							comment_Company2.setNature(object.getString("nature"));
+							comment_Company2.setTrade(object.getString("trade"));
+							comment_Company2.setCompany_name(object.getString("company_name"));
+							comment_Company2.setAmount(object.getInt("amount"));
+							comment_Company2.setWebsite(object.getString("website"));
+							comment_Company2.setContent(object.getString("content"));
+							comment_Company2.setPic_1(object.getInt("pic_1"));
+							comment_Company2.setPic_2(object.getInt("pic_2"));
+							comment_Company2.setPic_3(object.getInt("pic_3"));
+							comment_Company2.setPic_4(object.getInt("pic_4"));
+							comment_Company2.setPic_5(object.getInt("pic_5"));
+							comment_Company2.setPic_1_url(object.getString("pic_1_url"));
+							comment_Company2.setPic_2_url(object.getString("pic_2_url"));
+							comment_Company2.setPic_3_url(object.getString("pic_3_url"));
+							comment_Company2.setPic_4_url(object.getString("pic_4_url"));
+							comment_Company2.setPic_5_url(object.getString("pic_5_url"));
+							comment_Company2.setTop_num(object.getInt("top_num"));
+							comment_Company2.setIs_delete(object.getInt("is_delete"));
+							comment_Company2.setAdd_time(object.getLong("add_time"));
+						}
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			return comment_Company2;
+		} 
+		
+		//我的评论
+		public List<Comment_Company2> getMine_Comment(String result, Context context, long muser_id){
+			List<Comment_Company2> exosure_companys_s=null;
+			if(result!=null && !"".equals(result)){
+				try {
+					JSONObject jsonObject = new JSONObject(result);
+					int code = jsonObject.getInt("status_code");
+					if(code == 200){
+						JSONObject object = jsonObject.getJSONObject("content");
+						JSONArray array = object.getJSONArray("list");
+						exosure_companys_s = new ArrayList<Comment_Company2>();
+						for (int i = 0; i < array.length(); i++) {
+							JSONObject obj = array.getJSONObject(i);
+							Comment_Company2 exosure_Company = new Comment_Company2();
+							exosure_Company.setId(obj.getInt("id"));
+							exosure_Company.setCompany_id(obj.getInt("company_id"));
+							//exosure_Company.setParent_id(obj.getLong("parent_id"));
+							exosure_Company.setType(obj.getString("type"));
+							exosure_Company.setUser_id(obj.getInt("user_id"));
+							exosure_Company.setNickname(obj.getString("nickname"));
+							//exosure_Company.setNature(obj.getString("nature"));
+							//exosure_Company.setTrade(obj.getString("trade"));
+							exosure_Company.setCompany_name(obj.getString("company_name"));
+							//exosure_Company.setAmount(obj.getString("amount"));
+							//exosure_Company.setWebsite(obj.getString("website"));
+							exosure_Company.setParent_content(obj.getString("parent_content"));
+							exosure_Company.setContent(obj.getString("content"));
+							exosure_Company.setPic_1_url(obj.getString("pic_1_url"));
+							exosure_Company.setPic_2_url(obj.getString("pic_2_url"));
+							exosure_Company.setPic_3_url(obj.getString("pic_3_url"));
+							exosure_Company.setPic_4_url(obj.getString("pic_4_url"));
+							exosure_Company.setPic_5_url(obj.getString("pic_5_url"));
+							exosure_Company.setPic_1(obj.getInt("pic_1"));
+							exosure_Company.setPic_2(obj.getInt("pic_2"));
+							exosure_Company.setPic_3(obj.getInt("pic_3"));
+							exosure_Company.setPic_4(obj.getInt("pic_4"));
+							exosure_Company.setPic_5(obj.getInt("pic_5"));
+							exosure_Company.setTop_num(obj.getInt("top_num"));
+							exosure_Company.setIs_validate(obj.getLong("validate_time"));
+							exosure_Company.setValidate_time(obj.getLong("validate_time"));
+							exosure_Company.setIs_anonymous(obj.getLong("is_anonymous"));
+							exosure_Company.setAdd_time(obj.getInt("add_time"));
+							exosure_Company.setHas_child(obj.getLong("has_child"));
+							exosure_Company.setHas_child_ex(obj.getLong("has_child_ex"));
+							//JSONObject sub = obj.getJSONObject("sub");						
+							//exosure_Company.setRecord_count(sub.getLong("record_count"));
+							if(muser_id != Util.getShare_User_id(context)){
+								if(!obj.getString("company_name").equals("null")){
+									exosure_companys_s.add(exosure_Company);
+								}
+							}else{
+								exosure_companys_s.add(exosure_Company);
+							}
+						}
+					}
+					
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+			return exosure_companys_s;
 		}
 }

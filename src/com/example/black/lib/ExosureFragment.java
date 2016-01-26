@@ -1,6 +1,5 @@
 package com.example.black.lib;
 
-import com.example.black.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +10,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.example.black.R;
 import com.example.black.act.NatureAndIndustryAdapter;
 import com.example.black.lib.model.ExosureContent;
 import com.example.black.lib.model.ExosureImage;
